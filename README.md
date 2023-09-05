@@ -27,7 +27,7 @@ PARECER (Texto livre)
 
 ## Referências
 
-http://poi.apache.org/components/spreadsheet/quick-guide.html 
-https://spring.io/guides/tutorials/rest/
-https://openpyxl.readthedocs.io/en/stable/ 
-https://flask.palletsprojects.com 
+- http://poi.apache.org/components/spreadsheet/quick-guide.html 
+- https://spring.io/guides/tutorials/rest/
+- https://openpyxl.readthedocs.io/en/stable/ 
+- https://flask.palletsprojects.com 
