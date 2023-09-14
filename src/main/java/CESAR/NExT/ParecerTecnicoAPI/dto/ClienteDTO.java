@@ -41,7 +41,6 @@ public class ClienteDTO {
                 .nome(this.nome)
                 .cpf(this.cpf)
                 .telefone(this.telefone)
-                .equipamentos(cliente.getEquipamentos())
                 .build();
     }
 }
