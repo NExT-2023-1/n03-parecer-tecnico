@@ -1,10 +1,14 @@
 package CESAR.NExT.ParecerTecnicoAPI.entities;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -25,4 +29,8 @@ public class Cliente {
     private String cpf;
     @Column(nullable = false)
     private int telefone;
+    @OneToOne
+    @JoinColumn(name = "parecerTecnico_id", nullable = false)
+    @JsonBackReference
+    private ParecerTecnico parecerTecnico;
 }
