@@ -1,13 +1,12 @@
-package com.parecer.parecer;
+package CESAR.NExT.ParecerTecnicoAPI;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ParecerApplication {
+public class ParecerTecnicoApiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ParecerApplication.class, args);
+		SpringApplication.run(ParecerTecnicoApiApplication.class, args);
 	}
-
 }
