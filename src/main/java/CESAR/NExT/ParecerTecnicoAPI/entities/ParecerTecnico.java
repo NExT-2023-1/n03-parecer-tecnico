@@ -31,22 +31,4 @@ public class ParecerTecnico {
     private Cliente cliente;
     @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE}, mappedBy = "parecerTecnico")
     private Equipamento equipamento;
-
-    //git clone Repositório
-    //git status
-    //git fetch
-    //git pull
-    //git checkout nomeDaSuaBranch
-
-    //Nome Do Projeto
-    //Breve Descrição
-    //O que precisa para fazer o projeto rodar
-    //-Dependência
-    //-Aplicativo de terceiro: Postman / Imsomnia
-    //Explicação mais profunda
-    //-Como Funciona
-    //-Tabelas / Entidades
-    //Exemplo
-
-    //Google "Como fazer um bom ReadME"
 }

@@ -2,6 +2,7 @@ package CESAR.NExT.ParecerTecnicoAPI.entities;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
+import CESAR.NExT.ParecerTecnicoAPI.enumerator.TipoEquipamento;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -23,11 +24,7 @@ public class Equipamento {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     @Column(nullable = false)
-    private String tipo;
-    @Column(nullable = false)
-    private String defeito;
-    @Column(nullable = false)
-    private String parecer;
+    private TipoEquipamento tipoEquipamento;
     @JoinColumn(name = "parecerTecnico_id", nullable = false)
     @JsonBackReference
     private ParecerTecnico parecerTecnico;
