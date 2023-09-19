@@ -1,5 +1,7 @@
 package CESAR.NExT.ParecerTecnicoAPI.entities;
 
+import javax.persistence.OneToOne;
+
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import jakarta.persistence.Column;
@@ -30,5 +32,6 @@ public class Equipamento {
     private String parecer;
     @JoinColumn(name = "parecerTecnico_id", nullable = false)
     @JsonBackReference
+    @OneToOne
     private ParecerTecnico parecerTecnico;
 }

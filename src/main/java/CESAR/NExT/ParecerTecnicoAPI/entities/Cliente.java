@@ -1,5 +1,7 @@
 package CESAR.NExT.ParecerTecnicoAPI.entities;
 
+import javax.persistence.OneToMany;
+
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import jakarta.persistence.Column;
@@ -29,7 +31,7 @@ public class Cliente {
     private String cpf;
     @Column(nullable = false)
     private int telefone;
-    @OneToOne
+    @OneToMany
     @JoinColumn(name = "parecerTecnico_id", nullable = false)
     @JsonBackReference
     private ParecerTecnico parecerTecnico;
