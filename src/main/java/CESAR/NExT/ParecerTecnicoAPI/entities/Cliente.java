@@ -20,6 +20,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Cliente {
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
