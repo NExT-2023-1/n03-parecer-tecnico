@@ -37,18 +37,18 @@ public class EquipamentoService {
     }
 
     public Equipamento update(long id, @Valid EquipamentoDTO equipamentoDTO) {
-        Equipamento client = this.equipamentoRepository.findById(id).orElse(null);
-        if (client != null){
-            Equipamento updateClient = equipamentoDTO.toEntityUpdate(client);
-            return this.equipamentoRepository.save(updateClient);
+        Equipamento equipamento = this.equipamentoRepository.findById(id).orElse(null);
+        if (equipamento != null){
+            Equipamento updateEquipamento = equipamentoDTO.toEntityUpdate(equipamento);
+            return this.equipamentoRepository.save(updateEquipamento);
         }
         return null;
     }
 
     public boolean delete(long id) {
-        Equipamento client = this.equipamentoRepository.findById(id).orElse(null);
-        if (client != null){
-            this.equipamentoRepository.delete(client);
+        Equipamento equipamento = this.equipamentoRepository.findById(id).orElse(null);
+        if (equipamento != null){
+            this.equipamentoRepository.delete(equipamento);
             return true;
         }
         return false;
