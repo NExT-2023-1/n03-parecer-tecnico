@@ -1,33 +1,60 @@
-# Preenchimento de Parecer Técnico
+# Preenchimento automático de parecer técnico
 
-## Contexto
+## Entenda o contexto:
 
-Com a necessidade de gerar documentos referentes a pareceres técnicos provenientes de consertos de equipamentos eletroeletrônicos, existe a necessidade da geração automática desses documentos com suas informações providas a partir da entrada de dados disponibilizados pelas assistências técnicas. Assim, faz-se necessário um sistema que consiga preencher os dados a partir de um template do documento de parecer no formato XLSX.
+Com a necessidade de gerar documentos referentes a pareceres técnicos provenientes de consertos de equipamentos eletroeletrônicos, existe a necessidade da geração automática desses documentos com suas informações providas a partir da entrada de dados disponibilizados pelas assistências técnicas. Assim, faz-se necessário um sistema que consiga preencher os dados a partir de um template do documento de parecer no formato XLSX. 
 
-## Objetivo
+## Objetivo:
+Este App tem como objetivo final gerar planilhas preenchidas automaticamente , com base nas informações inseridas pelo usuário.
 
-Implementar uma API que fornece operações necessárias para:
+## COMO FUNCIONA?
+O APP permite as seguintes ações:
 
-- Receber dados do parecer técnico e armazenar em uma base de dados.
-- Recuperar um documento de parecer técnico em formato XLSX, preenchido automaticamente após recuperar as informações da base de dados pelo identificador do parecer técnico que foi gerado ao ser incluído na base.
-- Recuperar a lista de pareceres técnicos na base de dados, considerando a paginação de dados para evitar lentidão na consulta e na recuperação das informações.
-- Remover da base de dados um parecer técnico cadastrado previamente.
+-Rreceber dados de pareceres técnicos e armazená-los em uma base de dados.
 
-Validações para as operações deverão ser consideradas na implementação do serviço e deverá retornar uma identificação do problema ocorrido. Validações necessárias:
+- Recuperar documento de assitência técnica.
+Isso pode ser feito fornecendo o identificador da assistência técnica associado aos dados armazenados.
 
-- Todas as informações do parecer técnico são obrigatórias. (Cliente, Equipamento, Defeito, Texto do Parecer)
-- Informações com domínio definido devem apenas aceitar valores válidos.
+- Listar pareceres técnicos
+A API oferece a funcionalidade de listar pareceres técnicos armazenados na base de dados. Isso é feito com suporte à paginação de dados para evitar lentidão nas consultas e recuperação das informações.
 
-Em relação às informações do parecer, considerar o seguinte tipo de dados e domínios.
+- Remover parecer técnico
+É possível remover da base de dados um parecer técnico cadastrado anteriormente
 
-CLIENTE (Texto livre)
-EQUIPAMENTO (Smartphone, Smartwatch, TV)
-DEFEITO (Placa Oxidada, Tela Trincada, Componente com defeito)
-PARECER (Texto livre)
+## Sobre os Desenvolvedores:
+Este App foi criado como projeto final para o NEXT 2023, pelos desenvolvedores:
 
-## Referências
+Renata Figueredo
+Eduardo Morais
+Charliton Lucas
+Felipe Carvalho
+Luiz Diniz
 
-- http://poi.apache.org/components/spreadsheet/quick-guide.html 
-- https://spring.io/guides/tutorials/rest/
-- https://openpyxl.readthedocs.io/en/stable/ 
-- https://flask.palletsprojects.com 
+## Softwares utilizados no desenvolvimento do projeto:
+
+-JAVA
+https://www.oracle.com/br/java/technologies/downloads/
+
+-IDE ECLIPSE:
+https://eclipseide.org/
+
+-IDE VS CODE:
+https://code.visualstudio.com/
+
+-APACHE POI(INTEGRAÇÃO JAVA/EXCEL):
+http://poi.apache.org/components/spreadsheet/quick-guide.html
+
+-SPRING FRAMEWORK:
+https://spring.io/guides/tutorials/rest/
+
+-LOMBOK FRAMEWORK:
+https://projectlombok.org/
+
+-INSOMNIA:
+https://insomnia.rest/download
+
+-POSTMAN:
+https://www.postman.com/
+ 
+
+
