@@ -1,6 +1,5 @@
 package CESAR.NExT.ParecerTecnicoAPI.dto;
 import CESAR.NExT.ParecerTecnicoAPI.entities.Cliente;
-import jakarta.persistence.Entity;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -10,7 +9,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity
 @Data
 @Builder
 @AllArgsConstructor

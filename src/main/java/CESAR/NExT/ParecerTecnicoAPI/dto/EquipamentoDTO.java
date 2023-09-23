@@ -2,14 +2,12 @@ package CESAR.NExT.ParecerTecnicoAPI.dto;
 
 import CESAR.NExT.ParecerTecnicoAPI.entities.Equipamento;
 import CESAR.NExT.ParecerTecnicoAPI.enumerator.TipoEquipamento;
-import jakarta.persistence.Entity;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity
 @Data
 @Builder
 @AllArgsConstructor

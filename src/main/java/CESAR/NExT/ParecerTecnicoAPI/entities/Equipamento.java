@@ -9,6 +9,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -26,6 +27,7 @@ public class Equipamento {
     private long id;
     @Column(nullable = false)
     private TipoEquipamento tipoEquipamento;
+    @OneToOne
     @JoinColumn(name = "parecerTecnico_id", nullable = false)
     @JsonBackReference
     private ParecerTecnico parecerTecnico;

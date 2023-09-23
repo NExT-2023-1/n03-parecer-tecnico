@@ -4,15 +4,14 @@ import CESAR.NExT.ParecerTecnicoAPI.entities.Cliente;
 import CESAR.NExT.ParecerTecnicoAPI.entities.Equipamento;
 import CESAR.NExT.ParecerTecnicoAPI.entities.ParecerTecnico;
 import CESAR.NExT.ParecerTecnicoAPI.enumerator.Defeito;
-import jakarta.persistence.Entity;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity
 @Data
 @Builder
 @AllArgsConstructor
@@ -24,6 +23,10 @@ public class ParecerTecnicoDTO {
     private String parecer;
     @NotBlank
     private Defeito defeito;
+    @NotNull
+    private long cliente_id;
+    @NotNull
+    private long equipamento_id;
 
     public ParecerTecnico toEntity(Cliente cliente, Equipamento equipamento) {
         return ParecerTecnico.builder()
@@ -39,8 +42,8 @@ public class ParecerTecnicoDTO {
             .id(parecerTecnico.getId())
             .parecer(this.parecer)
             .defeito(this.defeito)
-            .cliente(parecerTecnico.getCliente())
-            .equipamento(parecerTecnico.getEquipamento())
+            .cliente(cliente)
+            .equipamento(equipamento)
             .build();
     }
 }
