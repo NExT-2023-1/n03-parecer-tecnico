@@ -3,7 +3,6 @@ package CESAR.NExT.ParecerTecnicoAPI.dto;
 import CESAR.NExT.ParecerTecnicoAPI.entities.Cliente;
 import CESAR.NExT.ParecerTecnicoAPI.entities.Equipamento;
 import CESAR.NExT.ParecerTecnicoAPI.entities.ParecerTecnico;
-import CESAR.NExT.ParecerTecnicoAPI.enumerator.Defeito;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
@@ -22,7 +21,7 @@ public class ParecerTecnicoDTO {
     @Size(min = 2, max = 100)
     private String parecer;
     @NotBlank
-    private Defeito defeito;
+    private String defeito;
     @NotNull
     private long cliente_id;
     @NotNull

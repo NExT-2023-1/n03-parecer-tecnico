@@ -24,10 +24,9 @@ import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 
 @RestController
-@RequestMapping("/pareceres")
+@RequestMapping("/parecerTecnico")
 @AllArgsConstructor(onConstructor = @__(@Autowired))
 public class ParecerTecnicoController {
-    
     private final ParecerTecnicoService parecerTecnicoService;
     
     @GetMapping
@@ -65,24 +64,24 @@ public class ParecerTecnicoController {
     }
 
     @GetMapping("/excelFile")
-    public void exportToExcel(HttpServletResponse response) throws IOException {
+    public void allFiles(HttpServletResponse response) throws IOException {
         response.setContentType("application/octet-stream");
 
         String headerKey = "Content-Disposition";
-        String headerValue = "attachment; filename=TodosPareceres" + ".xlsx";
+        String headerValue = "attachment; filename=listAllParecer" + ".xlsx";
         response.setHeader(headerKey, headerValue);
 
-        List<ParecerTecnico> parecerTecnicoList = parecerTecnicoService.listAll();
-        ExcelService service = new ExcelService(parecerTecnicoList);
+        List <ParecerTecnico> parecerList = parecerTecnicoService.listAll();
+        ExcelService service = new ExcelService(parecerList);
         service.getAll(response);
     }
     
     @GetMapping("/{id}/excelFile")
-    public void exportToExcel(HttpServletResponse response, @PathVariable long id) throws IOException {
+    public void singleFile(HttpServletResponse response, @PathVariable long id) throws IOException {
         response.setContentType("application/octet-stream");
 
         String headerKey = "Content-Disposition";
-        String headerValue = "attachment; filename=ParecerTécnico" + ".xlsx";
+        String headerValue = "attachment; filename=getByIdParecer" + ".xlsx";
         response.setHeader(headerKey, headerValue);
 
         ParecerTecnico parecerTecnico = parecerTecnicoService.getById(id);

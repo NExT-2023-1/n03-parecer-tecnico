@@ -1,6 +1,5 @@
 package CESAR.NExT.ParecerTecnicoAPI.entities;
 
-import CESAR.NExT.ParecerTecnicoAPI.enumerator.Defeito;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -26,7 +25,7 @@ public class ParecerTecnico {
     @Column(nullable = false)
     private String parecer;
     @Column(nullable = false)
-    private Defeito defeito;
+    private String defeito;
     @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE}, mappedBy = "parecerTecnico")
     private Cliente cliente;
     @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE}, mappedBy = "parecerTecnico")

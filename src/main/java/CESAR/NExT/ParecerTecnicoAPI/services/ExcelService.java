@@ -71,7 +71,7 @@ public class ExcelService {
             int columnCount = 0;
             createCell(row, columnCount++, parecerTecnico.getId(), style);
             createCell(row, columnCount++, parecerTecnico.getCliente().getNome(), style);
-            createCell(row, columnCount++, parecerTecnico.getEquipamento().getTipoEquipamento(), style);
+            createCell(row, columnCount++, parecerTecnico.getEquipamento().getTipo(), style);
             createCell(row, columnCount++, parecerTecnico.getDefeito(), style);
             createCell(row, columnCount++, parecerTecnico.getParecer(), style);
         }
@@ -88,7 +88,7 @@ public class ExcelService {
             int columnCount = 0;
             createCell(row, columnCount++, record.getId(), style);
             createCell(row, columnCount++, record.getCliente().getNome(), style);
-            createCell(row, columnCount++, record.getEquipamento().getTipoEquipamento(), style);
+            createCell(row, columnCount++, record.getEquipamento().getTipo(), style);
             createCell(row, columnCount++, record.getDefeito(), style);
             createCell(row, columnCount++, record.getParecer(), style);
         }

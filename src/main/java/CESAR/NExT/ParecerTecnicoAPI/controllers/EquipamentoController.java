@@ -21,7 +21,7 @@ import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 
 @RestController
-@RequestMapping("/equipamentos")
+@RequestMapping("/equipamento")
 @AllArgsConstructor(onConstructor = @__(@Autowired))
 public class EquipamentoController {
     private final EquipamentoService equipamentoService;

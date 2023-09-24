@@ -31,7 +31,7 @@ public class Cliente {
     @Column(nullable = false)
     private int telefone;
     @OneToOne
-    @JoinColumn(name = "parecerTecnico_id", nullable = false)
+    @JoinColumn(name = "parecerTecnico_id", nullable = true)
     @JsonBackReference
     private ParecerTecnico parecerTecnico;
 }
