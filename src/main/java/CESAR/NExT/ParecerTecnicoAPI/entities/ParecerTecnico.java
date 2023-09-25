@@ -1,12 +1,14 @@
 package CESAR.NExT.ParecerTecnicoAPI.entities;
 
-import jakarta.persistence.CascadeType;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -18,7 +20,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ParecerTecnico {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -26,8 +28,14 @@ public class ParecerTecnico {
     private String parecer;
     @Column(nullable = false)
     private String defeito;
-    @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE}, mappedBy = "parecerTecnico")
+
+    @ManyToOne
+    @JoinColumn(nullable = false)
+    @JsonBackReference
     private Cliente cliente;
-    @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE}, mappedBy = "parecerTecnico")
+
+    @ManyToOne
+    @JoinColumn(nullable = false)
+    @JsonBackReference
     private Equipamento equipamento;
 }
